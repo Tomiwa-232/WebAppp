@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashier Portal</title>
+  <link rel="stylesheet" href="css/device_data.css">
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <my-navbar></my-navbar>
+
+    <!-- Form section -->
+    <div class="col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0">
+      <div class="inventory-header">
+        <h2>Devices data</h2>
+      </div>
+      <form class="inventory-form">
+        <!-- Left section -->
+        <div class="form-section left">
+          <div class="form-group">
+            <input type="text" id="code" placeholder="">
+            <label for="code">:Code</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox1">
+            <select id="maint-type">
+              <option value=""></option>
+            </select>
+            <label for="maint-type">:Maintenance Type</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox2">
+            <select id="engineer">
+              <option value=""></option>
+            </select>
+            <label for="engineer">:Maintenance Engineer</label>
+          </div>
+          <div class="form-group">
+            <div class="radio-group mt-3">
+              <label for="payment-status">:Payment status</label> <br>
+              <input type="radio" name="payment" value="all" checked> All
+              <input type="radio" name="payment" value="paid"> Paid
+              <input type="radio" name="payment" value="unpaid"> Unpaid
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" id="load-button">Load</button>
+            <input type="text" id="work-order" placeholder="">
+            <label for="work-order">:Work order number</label>
+          </div>
+        </div>
+
+        <!-- Right section -->
+        <div class="form-section right">
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox3">
+            <select id="customer-name">
+              <option value=""></option>
+            </select>
+            <label for="customer-name">:Customer Name</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox4">
+            <select id="maint-place">
+              <option value=""></option>
+            </select>
+            <label for="maint-place">:Maintenance Place</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox5">
+            <select id="status">
+              <option value="">Repair Underway</option>
+            </select>
+            <label for="status">:Status</label>
+          </div>
+          <div class="form-group">
+            <div class="radio-group mt-3">
+              <label for="maint-type-radio">:Maintenance Type</label> <br>
+              <input type="radio" name="maint-type" value="all" checked> All
+              <input type="radio" name="maint-type" value="periodic"> Periodic Maintenance
+              <input type="radio" name="maint-type" value="repair"> Repair
+            </div>
+          </div>
+          <div class="form-group" style="direction: rtl;">
+            <span style="margin: 0px;">
+              <label for="from-date">From:</label>
+              <input type="date" id="from-date" value="2018-01-01">
+            </span>
+            <span style="margin: 0px;">
+              <label for="to-date">To:</label>
+              <input type="date" id="to-date" value="2024-09-26">
+            </span>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
+
+    <div class="col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0">
+      <!-- Table Section -->
+      <div class="table-section">
+        <table class="table table-striped table-hover">
+          <thead style="position: sticky; top: 0; background: #fff;">
+            <tr>
+              <th>Work Order</th>
+              <th>Delivery Date</th>
+              <th>Received Date</th>
+              <th>Cost</th>
+              <th>Status</th>
+              <th>Device</th>
+              <th>Maintenance</th>
+              <th>Customer Name</th>
+              <th>Serial Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>7828</td>
+              <td>25/07/2021</td>
+              <td>25/07/2021</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>WAC-12CA-BM</td>
+              <td>Agent Service Center</td>
+              <td>Karam Amir Zarif</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>7841</td>
+              <td>01/08/2021</td>
+              <td>01/08/2021</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>Agent Service Center</td>
+              <td>Heba Ali Aref</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>7869</td>
+              <td>07/08/2021</td>
+              <td>07/08/2021</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>WAC-S12 C PREMIUM</td>
+              <td>Agent Service Center</td>
+              <td>Gharib Ahmed Metwally</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>7907</td>
+              <td>17/08/2021</td>
+              <td>17/08/2021</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>WAC-S24H LOMO</td>
+              <td>Agent Service Center</td>
+              <td>Mohamed Ahmed Nasser</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>26541</td>
+              <td>10/10/2021</td>
+              <td>10/10/2021</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>WAC-18CA-BM</td>
+              <td>Agent Service Center</td>
+              <td>Mohamed El-Sayed El-Husseiny</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>16798</td>
+              <td>06/12/2022</td>
+              <td>06/12/2022</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>Washing Machines</td>
+              <td>Agent Service Center</td>
+              <td>Heba El-Sabah</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>16963</td>
+              <td>02/01/2023</td>
+              <td>02/01/2023</td>
+              <td>250</td>
+              <td>Repairing</td>
+              <td>Refrigerators</td>
+              <td>Agent Service Center</td>
+              <td>Ahmed Abdel</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>17744</td>
+              <td>04/05/2023</td>
+              <td>04/05/2023</td>
+              <td>200</td>
+              <td>Repairing</td>
+              <td>Washing Machines</td>
+              <td>Agent Service Center</td>
+              <td>Mohamed Abdel</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>19217</td>
+              <td>30/09/2023</td>
+              <td>30/09/2023</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>Washing Machines</td>
+              <td>Agent Service Center</td>
+              <td>Ahmed Abdel-Gawad</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>19218</td>
+              <td>30/09/2023</td>
+              <td>30/09/2023</td>
+              <td>50</td>
+              <td>Repairing</td>
+              <td>Washing Machines</td>
+              <td>Agent Service Center</td>
+              <td>Mohamed Ahmed Abbas</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>19220</td>
+              <td>05/10/2023</td>
+              <td>05/10/2023</td>
+              <td>50</td>
+              <td>Repairing</td>
+              <td>Air Conditioners</td>
+              <td>Agent Service Center</td>
+              <td>Zidan Abdullah</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>19260</td>
+              <td>05/10/2023</td>
+              <td>05/10/2023</td>
+              <td>100</td>
+              <td>Repairing</td>
+              <td>Washing Machines</td>
+              <td>Agent Service Center</td>
+              <td>Alaa Suleiman</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>19279</td>
+              <td>08/10/2023</td>
+              <td>08/10/2023</td>
+              <td>0</td>
+              <td>Repairing</td>
+              <td>Refrigerators</td>
+              <td>Agent Service Center</td>
+              <td>Ahmed Mahmoud Suleiman</td>
+              <td>13</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Buttons Section -->
+      <div class="form-buttons">
+        <button class="btn btn-danger" onclick="deleteEntry()">Delete</button>
+        <button class="btn btn-warning" onclick="editEntry()">Edit</button>
+        <button class="btn btn-success" onclick="addEntry()">Add</button>
+        <button class="btn btn-secondary" onclick="window.close()">Close</button>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/navbar.js"></script>
+
+
+</body>
+
+</html>

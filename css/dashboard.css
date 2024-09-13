@@ -1,0 +1,13 @@
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}

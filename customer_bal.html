@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier Portal - Customer Balances</title>
+    <link rel="stylesheet" href="css/customer_bal.css">
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <my-navbar></my-navbar>
+        
+            <!-- Customer Balances Section -->
+            <div class="balance-section mt-4">
+                <h2 class="text-center text-primary">Customer Balances</h2>
+                <div class="form-section justify-content-end align-items-center mt-4 mb-4 rtl-section">
+                    <label for="customerName" class="me-2">Name:</label>
+                    <input type="text" id="customerName" class="form-control w-50" placeholder="Enter customer name">
+                </div>
+
+                <div class="table-responsive" style="max-height: 400px; overflow-y: scroll; direction: rtl;">
+                    <table class="table table-striped table-hover">
+                        <thead style="position: sticky; top: 0; background: #fff;">
+                            <tr>
+                                <th style="text-align: right;">Code</th>
+                                <th style="text-align: right;">Customer Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Simulating 15 rows -->
+                            <tr>
+                                <td style="text-align: right;">8006</td>
+                                <td style="text-align: right;">Nagui Sabry Hisham</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7987</td>
+                                <td style="text-align: right;">Ahmed Hassan</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7978</td>
+                                <td style="text-align: right;">Mohammed Ali</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7948</td>
+                                <td style="text-align: right;">Omar Said</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7896</td>
+                                <td style="text-align: right;">Fady Mourad</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7855</td>
+                                <td style="text-align: right;">Wael Hussein</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7821</td>
+                                <td style="text-align: right;">Samy Youssef</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7800</td>
+                                <td style="text-align: right;">Yasser Emad</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7755</td>
+                                <td style="text-align: right;">Karim Khaled</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7721</td>
+                                <td style="text-align: right;">Tarek Maher</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7698</td>
+                                <td style="text-align: right;">Mahmoud Amr</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7659</td>
+                                <td style="text-align: right;">Amira Waleed</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7602</td>
+                                <td style="text-align: right;">Rania Samir</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7551</td>
+                                <td style="text-align: right;">Lina Abdelrahman</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">7503</td>
+                                <td style="text-align: right;">Adel Mohamed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Buttons Section -->
+                <div class="button-container mt-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#installmentsModal">View Installments</button>
+                    <button type="button" class="btn btn-success">Pay</button>
+                    <button type="button" class="btn btn-danger" onclick="window.close()">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- Modal for Installments -->
+<div class="modal fade" id="installmentsModal" tabindex="-1" aria-labelledby="installmentsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="installmentsModalLabel">View Installments</h5>
+                <div class="col text-start">
+                    <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- Customer Information Header -->
+                <div class="form-section justify-content-end align-items-center mt-2 mb-2 rtl-section">
+                    <label for="customerName" class="me-2"> Customer:</label>
+                    <input type="" id="customerName" class="form-control" placeholder="Customer name">
+                </div>
+
+                <!-- Installments Table Section -->
+                <div class="table-responsive" style="max-height: 400px; overflow-y: scroll; direction: rtl;">
+                    <table class="table table-striped table-hover">
+                        <thead style="position: sticky; top: 0; background: #fff; direction: rtl;">
+                            <tr>
+                                <th style="text-align: right;">Inst number</th>
+                                <th style="text-align: right;">Date</th>
+                                <th style="text-align: right;">Amount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- Sample Installment Rows -->
+                            <tr>
+                                <td style="text-align: right;">1</td>
+                                <td style="text-align: right;">2023/12/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">2</td>
+                                <td style="text-align: right;">2024/01/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">3</td>
+                                <td style="text-align: right;">2024/02/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;">2024/03/05</td>
+                                <td style="text-align: right;">2000</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Total Amount Section -->
+                <div class="row mt-3">
+                    <div class="col text-end rtl-section ">
+                        <strong>Total: </strong><span class="ms-5">28750</span>
+                    </div>
+                </div>
+
+                <!-- Cancel Button -->
+                <div class="row mt-3">
+                    <div class="col text-start">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+    
+</body>
+
+</html>

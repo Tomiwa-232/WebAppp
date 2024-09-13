@@ -1,0 +1,304 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.inventory-header {
+    margin: 30px;
+}
+
+
+.inventory-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    flex: 0.4; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: right; 
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px;
+}
+
+.form-checkboxes {
+    transform: scale(1.4);
+    width: 14px;
+    height: 14px;
+}
+
+.form-group input[type="text"],
+select {
+    width: 80%; 
+    max-width: 170px; 
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #c2c2c2;
+    font-size: 16px;
+    text-align: right; 
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px; 
+    min-width: 120px; 
+    text-align: right; 
+}
+
+button {
+    align-self: flex-end; 
+}
+
+.show-price {
+    font-size: 16px;
+    margin-left: 10px; 
+}
+
+.table-section {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: fit-content;
+    max-height: 40vh;
+    direction: rtl; /* Moves the scroll bar to the left */
+}
+
+.table {
+    direction: ltr; /* Ensures the content remains left-to-right */
+}
+
+th, td, tr {
+    direction: rtl;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
+}
+
+.form-buttons label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+    min-width: auto;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 767px) {
+    body {
+        max-width: 95%;
+    }
+
+    .inventory-header {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .inventory-form {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 20px;
+    }
+
+    .form-section.left,
+    .form-section.right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        display: flex;
+        /* flex-direction: column-reverse; */
+        align-items: flex-end;
+    }
+
+    .form-group label {
+        text-align: right;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .table-section {
+        overflow-x: auto;
+    }
+
+    .form-buttons {
+        display: flex;
+        /* flex-direction: column; */
+        gap: 10px;
+        align-items: stretch;
+        margin-top: 20px;
+    }
+
+    .form-buttons .form-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-buttons .form-group input {
+        margin-right: 5px;
+    }
+}
+
+/* General styling for the form */
+.inventory-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 0 20px; /* Adding padding for mobile view */
+}
+
+/* Ensuring that form sections take up space correctly on different screens */
+.form-section.left,
+.form-section.right {
+    width: 48%; /* Slight reduction to ensure spacing on both sides */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 767px) {
+    body {
+        padding: 0 15px; /* Adding space around the edges for mobile */
+    }
+
+    .inventory-header {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .inventory-form {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 20px;
+        padding: 0 10px; /* Additional padding on smaller screens */
+    }
+
+    .form-section.left,
+    .form-section.right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        display: flex;
+        /* flex-direction: column-reverse; */
+        align-items: flex-end;
+    }
+
+    .form-group label {
+        text-align: right;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .table-section {
+        overflow-x: auto;
+    }
+
+    .form-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: stretch;
+        margin-top: 10px;
+    }
+
+    .form-buttons .form-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-buttons .form-group input {
+        margin-right: 5px;
+    }
+}
+
+/* Media Queries for Tablets and Small Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .inventory-header {
+        margin: 25px;
+        text-align: center;
+    }
+
+    .inventory-form {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .form-section.left,
+    .form-section.right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: stretch;
+        margin-top: 20px;
+    }
+
+    .form-buttons .form-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-buttons .form-group input {
+        margin-right: 5px;
+    }
+}
+
+/* General Responsive Table Styling */
+.table-section {
+    /* overflow-x: auto; */
+    padding: 0 15px; /* Adding space to avoid edge-to-edge layout */
+}
+
+.table-section table {
+    width: 100%;
+    white-space: nowrap;
+}
+
+/* .navbar-nav {
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 5px 0;
+} */

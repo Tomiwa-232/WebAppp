@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid mt-">
+        <div class="row">
+            <!--content here-->
+            <div class="col-md-6 col-lg-6 mx-auto d-flex flex-column vh-100 justify-content-center">
+                <div class="login-div">
+                    <form class="login-form" onsubmit="redirectToDashboard(event)">
+                        <div class="text-center">
+                            <img src="bootstrap-icons-1.11.3/people-fill.svg" alt="Users Icon" class="users-icon">
+                            <h2>Welcome</h2>
+                        </div>
+                        <div class="mb-3 text-end">
+                            <label for="username" class="form-label">User Name</label>
+                            <select id="userRole" class="form-select">
+                                <option>Admin</option>
+                                <option>User 1</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 text-end">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <!-- <div class="mb-3 text-end">
+                            <a href="#" class="restore-pass-link">Restore Password</a>
+                        </div> -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary me-2">OK</button>
+                            <button type="button" class="btn btn-secondary ms-2">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--content here-->
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectToDashboard(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'dashboard.html'; // Redirect to dashboard
+        }
+    </script>
+</body>
+
+</html>

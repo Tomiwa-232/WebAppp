@@ -1,0 +1,88 @@
+/* Ensuring consistent width across all views */
+.balance-section, .balance-section .table-responsive, .form-section, #customerName {
+    width: 100%;
+    max-width: 600px; /* Set maximum width similar to mobile */
+    margin: 0 auto; /* Center align for larger screens */
+}
+
+/* Flex display for form controls */
+.form-section {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Ensure the label and input are aligned */
+}
+
+/* Place label in front of input */
+.form-section label {
+    font-weight: 600;
+    margin-right: 10px; /* Space between label and input */
+    white-space: nowrap; /* Prevent the label from wrapping to the next line */
+}
+
+/* RTL only for form controls */
+.rtl-section {
+    direction: rtl;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Buttons container for mobile and larger screens */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 15px; /* Add some spacing on mobile */
+    }
+
+    .form-section {
+        flex-direction: row; /* Keep label and input inline */
+        gap: 15px;
+    }
+
+    .button-container {
+        flex-direction: row; /* Stack buttons vertically on small screens */
+        align-items: center; /* Make buttons full width */
+        gap: 15px; /* Space between buttons */
+    }
+
+    body {
+        padding: 0 20px; /* Add spacing on the left and right sides */
+    }
+}
+
+/* Media Queries for Tablets and Small Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .form-section {
+        flex-direction: row; /* Keep label and input inline */
+    }
+}
+
+/* Scroll effect */
+.table-responsive {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+/* RTL arrangement for table */
+table {
+    direction: rtl;
+}
+
+tbody td {
+    text-align: end;
+}
+
+thead th {
+    text-align: end;
+}
