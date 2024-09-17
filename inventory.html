@@ -10,368 +10,367 @@
 
 <body>
   <div class="container-fluid">
-      <my-navbar></my-navbar>
-      <!--Form section-->
+    <my-navbar></my-navbar>
+    <!--Form section-->
 
-      <div class="col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0">
-
-        <div class="inventory-header">
-          <h2>Store Inventory</h2>
-        </div>
-        <form class="inventory-form">
-          <div class="form-section left">
-            <div class="form-group">
-              <input type="checkbox" class="form-checkboxes" id="checkbox1">
-              <select id="subcategory">
-                <option value="" type="text" id="subcategory"></option>
-                <option value="">Subcategory</option>
-              </select>
-              <label for="subcategory">:Subcategory</label>
-            </div>
-            <div class="form-group">
-              <input type="text" id="empty-field" placeholder="text here">
-              <select id="quan">
-                <option value="" type="text" id="quan">All</option>
-                <option value="" type="text" id="quan">equals</option>
-                <option value="" type="text" id="quan">bigger than</option>
-                <option value="" type="text" id="quan">less than</option>
-              </select>
-
-              <label for="quan">:Quantity</label>
-            </div>
-            <div class="form-group">
-              <input type="text" id="itemname" placeholder="name here">
-              <label for="itemname">:Item name</label>
-            </div>
-
-            <button type="button" class="btn btn-primary" id="load-button">Load</button>
-          </div>
-
-          <div class="form-section right">
-            <div class="form-group">
-              <input type="checkbox" class="form-checkboxes" id="checkbox3">
-              <select id="maincategory">
-                <option value="" type="text" id="maincategory"></option>
-                <option value="">Main category</option>
-              </select>
-              <label for="maincategory">:Main category</label>
-            </div>
-            <div class="form-group">
-              <input type="checkbox" class="form-checkboxes" id="checkbox4">
-              <select id="store">
-                <option value="" type="text" id="store"></option>
-                <option value="">Store</option>
-              </select>
-              <label for="store">:Store</label>
-            </div>
-            <div class="form-group">
-              <input type="text" id="code" placeholder="code here">
-              <label for="code">:Code</label>
-            </div>
-            <div class="form-group">
-              <input type="checkbox" class="form-checkboxes" id="checkbox5">
-              <label for="checkbox5" class="show-price">Show latest purchase price</label>
-            </div>
-
-          </div>
-        </form>
-
-        <!-- <div class=" col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0"> -->
-        <!-- Table Section -->
-        <div class="table-section">
-          <table class="table table-striped table-hover">
-              <thead style="position: sticky; top: 0; background: #fff;">
-                  <tr>
-                      <th>Store</th>
-                      <th>Wh Tot</th>
-                      <th>Wh Price</th>
-                      <th>Tot Sale</th>
-                      <th>Sale Prc</th>
-                      <th>Tot Cost</th>
-                      <th>Cost</th>
-                      <th>Quan</th>
-                      <th>Item Name</th>
-                      <th>Code</th>
-                      <th>Ser</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Stock1</td>
-                      <td>0.00</td>
-                      <td>6500</td>
-                      <td>0.00</td>
-                      <td>7500</td>
-                      <td>0.00</td>
-                      <td>5750</td>
-                      <td>0</td>
-                      <td>WAC-S 12 C LOMO</td>
-                      <td>1</td>
-                      <td>1</td>
-                  </tr>
-              <tr>
-                <td>Stock2</td>
-                <td>0.00</td>
-                <td>4000</td>
-                <td>0.00</td>
-                <td>6000</td>
-                <td>0.00</td>
-                <td>4500</td>
-                <td>5</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>2</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>Stock3</td>
-                <td>0.00</td>
-                <td>1500</td>
-                <td>0.00</td>
-                <td>2000</td>
-                <td>0.00</td>
-                <td>1800</td>
-                <td>10</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>3</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Stock4</td>
-                <td>0.00</td>
-                <td>800</td>
-                <td>0.00</td>
-                <td>1200</td>
-                <td>0.00</td>
-                <td>900</td>
-                <td>20</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>4</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>Stock5</td>
-                <td>0.00</td>
-                <td>7000</td>
-                <td>0.00</td>
-                <td>9000</td>
-                <td>0.00</td>
-                <td>8500</td>
-                <td>3</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>5</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>Stock6</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>6</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>Stock7</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>7</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>Stock8</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>8</td>
-                <td>8</td>
-              </tr>
-              <tr>
-                <td>Stock9</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>9</td>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>Stock10</td>
-                <td>0.00</td>
-                <td>300</td>
-                <td>0.00</td>
-                <td>450</td>
-                <td>0.00</td>
-                <td>400</td>
-                <td>15</td>
-                <td>WAC-S 12 C LOMO</td>
-                <td>10</td>
-                <td>10</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <div class="col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0">
+      <div class="inventory-header">
+        <h2>Store Inventory</h2>
       </div>
-      <!--content here-->
-        <!-- Buttons Section -->
-        <div class="form-buttons">
-          <button class="btn btn-primary" onclick="window.print()">Print</button>
+      <form class="inventory-form">
+        <div class="form-section left">
           <div class="form-group">
-            <input type="checkbox" class="form-checkboxes" id="checkbox6">
-              <label for="with-quan">Without Quantity</label>
+            <input type="checkbox" class="form-checkboxes" id="checkbox1">
+            <select id="subcategory">
+              <option value="" type="text" id="subcategory"></option>
+              <option value="">Subcategory</option>
+            </select>
+            <label for="subcategory">:Subcategory</label>
           </div>
-          <button class="btn btn-secondary" onclick="window.close()">Close</button>
-      </div>
+          <div class="form-group">
+            <input type="text" id="empty-field" placeholder="text here">
+            <select id="quan">
+              <option value="" type="text" id="quan">All</option>
+              <option value="" type="text" id="quan">equals</option>
+              <option value="" type="text" id="quan">bigger than</option>
+              <option value="" type="text" id="quan">less than</option>
+            </select>
 
+            <label for="quan">:Quantity</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="itemname" placeholder="name here">
+            <label for="itemname">:Item name</label>
+          </div>
+
+        </div>
+
+        <div class="form-section right">
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox3">
+            <select id="maincategory">
+              <option value="" type="text" id="maincategory"></option>
+              <option value="">Main category</option>
+            </select>
+            <label for="maincategory">:Main category</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox4">
+            <select id="store">
+              <option value="" type="text" id="store"></option>
+              <option value="">Store</option>
+            </select>
+            <label for="store">:Store</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="code" placeholder="code here">
+            <label for="code">:Code</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" class="form-checkboxes" id="checkbox5">
+            <label for="checkbox5" class="show-price">Show latest purchase price</label>
+          </div>
+
+          <button class="btn btn-primary" id="load-button">Load</button>
+        </div>
+      </form>
+
+      <!-- <div class=" col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0"> -->
+      <!-- Table Section -->
+      <div class="table-section">
+        <table class="table table-striped table-hover">
+          <thead style="position: sticky; top: 0; background: #fff;">
+            <tr>
+              <th>Store</th>
+              <th>Wh Tot</th>
+              <th>Wh Price</th>
+              <th>Tot Sale</th>
+              <th>Sale Prc</th>
+              <th>Tot Cost</th>
+              <th>Cost</th>
+              <th>Quan</th>
+              <th>Item Name</th>
+              <th>Code</th>
+              <th>Ser</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stock1</td>
+              <td>0.00</td>
+              <td>6500</td>
+              <td>0.00</td>
+              <td>7500</td>
+              <td>0.00</td>
+              <td>5750</td>
+              <td>0</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Stock2</td>
+              <td>0.00</td>
+              <td>4000</td>
+              <td>0.00</td>
+              <td>6000</td>
+              <td>0.00</td>
+              <td>4500</td>
+              <td>5</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Stock3</td>
+              <td>0.00</td>
+              <td>1500</td>
+              <td>0.00</td>
+              <td>2000</td>
+              <td>0.00</td>
+              <td>1800</td>
+              <td>10</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>3</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Stock4</td>
+              <td>0.00</td>
+              <td>800</td>
+              <td>0.00</td>
+              <td>1200</td>
+              <td>0.00</td>
+              <td>900</td>
+              <td>20</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>4</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Stock5</td>
+              <td>0.00</td>
+              <td>7000</td>
+              <td>0.00</td>
+              <td>9000</td>
+              <td>0.00</td>
+              <td>8500</td>
+              <td>3</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>5</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Stock6</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>6</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Stock7</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>7</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Stock8</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>8</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Stock9</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>9</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Stock10</td>
+              <td>0.00</td>
+              <td>300</td>
+              <td>0.00</td>
+              <td>450</td>
+              <td>0.00</td>
+              <td>400</td>
+              <td>15</td>
+              <td>WAC-S 12 C LOMO</td>
+              <td>10</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <!--content here-->
+    <!-- Buttons Section -->
+    <div class="form-buttons">
+      <button class="btn btn-primary" onclick="window.print()">Print</button>
+      <div class="form-group">
+        <input type="checkbox" class="form-checkboxes" id="checkbox6">
+        <label for="with-quan">Without Quantity</label>
+      </div>
+      <button class="btn btn-secondary" onclick="window.close()">Close</button>
+    </div>
+
+  </div>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script type="module" src="js/navbar.js"></script>
