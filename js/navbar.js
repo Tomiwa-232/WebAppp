@@ -51,10 +51,14 @@ class MyNavbar extends HTMLElement {
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link" href="dashboard.html" id="navbarDropdown3" role="button"
-                                            aria-expanded="false">
-                                            Dashboard
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Windows
                                         </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                                            <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
