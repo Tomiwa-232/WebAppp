@@ -7,12 +7,12 @@ h2 {
     color: #333;
 }
 
-.inventory-header {
+.device-data-header {
     margin: 30px;
 }
 
 
-.inventory-form {
+.device-data-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -35,6 +35,13 @@ h2 {
     gap: 15px;
 }
 
+.form-group-date {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 10px;
+}
+
 .date-form {
     display: flex;
     justify-content: flex-end; 
@@ -50,31 +57,36 @@ h2 {
 
 .form-group input[type="text"],
 select {
+   
     width: 80%; 
-    max-width: 170px; 
+    max-width: 170px;
     padding: 5px;
     border-radius: 4px;
     border: 1px solid #c2c2c2;
     font-size: 16px;
-    text-align: right; 
+    text-align: right;
+    
 }
 
 label {
     font-size: 16px;
     font-weight: 600;
     margin-left: 10px; 
-    min-width: 120px; 
-    text-align: right; 
+    min-width: 180px;
+    text-align: right;
+}
+
+.radio label {
+    min-width: auto; 
+}
+
+.form-group-date label {
+    min-width: 0px;
+    margin-left: 5px;
 }
 
 button {
     align-self: flex-end; 
-    width: 80px;
-}
-
-.show-price {
-    font-size: 16px;
-    margin-left: 10px; 
 }
 
 .table-section {
@@ -95,7 +107,7 @@ th, td, tr {
 .form-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin: 20px;
 }
 
@@ -106,70 +118,8 @@ th, td, tr {
     min-width: auto;
 }
 
-/* Media Queries for Mobile Devices */
-@media (max-width: 767px) {
-    body {
-        max-width: 95%;
-    }
-
-    .inventory-header {
-        margin: 20px;
-        text-align: center;
-    }
-
-    .inventory-form {
-        flex-direction: column;
-        align-items: stretch;
-        margin-bottom: 20px;
-    }
-
-    .form-section.left,
-    .form-section.right {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        display: flex;
-        /* flex-direction: column-reverse; */
-        align-items: flex-end;
-    }
-
-    .form-group label {
-        text-align: right;
-    }
-
-    .form-group input,
-    .form-group select {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .table-section {
-        overflow-x: auto;
-    }
-
-    .form-buttons {
-        display: flex;
-        /* flex-direction: column; */
-        gap: 10px;
-        align-items: stretch;
-        margin-top: 20px;
-    }
-
-    .form-buttons .form-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .form-buttons .form-group input {
-        margin-right: 5px;
-    }
-}
-
 /* General styling for the form */
-.inventory-form {
+.device-data-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -190,12 +140,12 @@ th, td, tr {
         padding: 0 15px; /* Adding space around the edges for mobile */
     }
 
-    .inventory-header {
+    .device-data-header {
         margin: 20px;
         text-align: center;
     }
 
-    .inventory-form {
+    .device-data-form {
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 20px;
@@ -218,7 +168,19 @@ th, td, tr {
         text-align: right;
     }
 
-    .form-group input,
+    .radio label {
+        display: flex;
+        direction: rtl;
+        margin-top: 5px;
+        gap: 5px;
+    }
+
+    .form-checkboxes {
+        margin: auto;
+        padding: auto;
+    }
+
+    .form-group input[type="text"],
     .form-group select {
         width: 100%;
         margin-bottom: 5px;
@@ -253,12 +215,12 @@ th, td, tr {
         padding: 0 20px;
     }
 
-    .inventory-header {
+    .device-data-header {
         margin: 25px;
         text-align: center;
     }
 
-    .inventory-form {
+    .device-data-form {
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 25px;
