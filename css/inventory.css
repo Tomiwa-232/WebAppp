@@ -99,68 +99,6 @@ th, td, tr {
     min-width: auto;
 }
 
-/* Media Queries for Mobile Devices */
-@media (max-width: 767px) {
-    body {
-        max-width: 95%;
-    }
-
-    .inventory-header {
-        margin: 20px;
-        text-align: center;
-    }
-
-    .inventory-form {
-        flex-direction: column;
-        align-items: stretch;
-        margin-bottom: 20px;
-    }
-
-    .form-section.left,
-    .form-section.right {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        display: flex;
-        /* flex-direction: column-reverse; */
-        align-items: flex-end;
-    }
-
-    .form-group label {
-        text-align: right;
-    }
-
-    .form-group input,
-    .form-group select {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .table-section {
-        overflow-x: auto;
-    }
-
-    .form-buttons {
-        display: flex;
-        /* flex-direction: column; */
-        gap: 10px;
-        align-items: stretch;
-        margin-top: 20px;
-    }
-
-    .form-buttons .form-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .form-buttons .form-group input {
-        margin-right: 5px;
-    }
-}
-
 /* General styling for the form */
 .inventory-form {
     display: flex;
@@ -211,12 +149,17 @@ th, td, tr {
         text-align: right;
     }
 
-    .form-group input,
+    .form-group input[type="text"],
     .form-group select {
         width: 100%;
         margin-bottom: 5px;
     }
 
+    .form-checkboxes {
+        margin: auto;
+        padding: auto;
+    }
+    
     .table-section {
         overflow-x: auto;
     }
@@ -281,6 +224,7 @@ th, td, tr {
     .form-buttons .form-group input {
         margin-right: 5px;
     }
+
 }
 
 /* General Responsive Table Styling */
