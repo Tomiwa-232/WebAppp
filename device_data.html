@@ -14,10 +14,10 @@
 
     <!-- Form section -->
     <div class="col-lg-10 mx-auto col-md-12 col-sm-12 col-xs-12 p-0">
-      <div class="inventory-header">
+      <div class="device-data-header">
         <h2>Devices data</h2>
       </div>
-      <form class="inventory-form">
+      <form class="device-data-form">
         <!-- Left section -->
         <div class="form-section left">
           <div class="form-group">
@@ -28,6 +28,7 @@
             <input type="checkbox" class="form-checkboxes" id="checkbox1">
             <select id="maint-type">
               <option value=""></option>
+              <option value="">Agent</option>
             </select>
             <label for="maint-type">:Maintenance Type</label>
           </div>
@@ -38,16 +39,18 @@
             </select>
             <label for="engineer">:Maintenance Engineer</label>
           </div>
-          <div class="form-group">
+          <div class="radio">
             <div class="radio-group mt-3">
               <label for="payment-status">:Payment status</label> <br>
-              <input type="radio" name="payment" value="all" checked> All
-              <input type="radio" name="payment" value="paid"> Paid
-              <input type="radio" name="payment" value="unpaid"> Unpaid
+              <label for="all-payment"><input type="radio" name="payment" id="all-payment" value="all" checked>
+                All</label>
+              <label for="paid-payment"><input type="radio" name="payment" id="paid-payment" value="paid"> Paid</label>
+              <label for="unpaid-payment"><input type="radio" name="payment" id="unpaid-payment" value="unpaid">
+                Unpaid</label>
             </div>
           </div>
           <div class="form-group">
-            <button class="btn btn-primary" id="load-button">Load</button>
+
             <input type="text" id="work-order" placeholder="">
             <label for="work-order">:Work order number</label>
           </div>
@@ -76,24 +79,25 @@
             </select>
             <label for="status">:Status</label>
           </div>
-          <div class="form-group">
+          <div class="radio">
             <div class="radio-group mt-3">
               <label for="maint-type-radio">:Maintenance Type</label> <br>
-              <input type="radio" name="maint-type" value="all" checked> All
-              <input type="radio" name="maint-type" value="periodic"> Periodic Maintenance
-              <input type="radio" name="maint-type" value="repair"> Repair
+              <label for="maint-all"><input type="radio" name="maint-type" id="maint-all" value="all" checked>
+                All</label>
+              <label for="periodic"><input type="radio" name="maint-type" id="periodic" value="periodic"> Periodic
+                Maintenance</label>
+              <label for="repair"><input type="radio" name="maint-type" id="repair" value="repair"> Repair</label>
             </div>
           </div>
-          <div class="form-group" style="direction: rtl;">
-            <span style="margin: 0px;">
-              <label for="from-date">From:</label>
-              <input type="date" id="from-date" value="2018-01-01">
-            </span>
-            <span style="margin: 0px;">
-              <label for="to-date">To:</label>
-              <input type="date" id="to-date" value="2024-09-26">
-            </span>
+          <div class="form-group-date" style="direction: rtl;">
+
+            <label for="from-date">From:</label>
+            <input type="date" id="from-date" value="2018-01-01">
+            <label for="to-date">To:</label>
+            <input type="date" id="to-date" value="2024-09-26">
           </div>
+
+          <button class="btn btn-primary" id="load-button">Load</button>
 
         </div>
 
@@ -268,13 +272,11 @@
 
       <!-- Buttons Section -->
       <div class="form-buttons">
-        <button class="btn btn-danger" onclick="deleteEntry()">Delete</button>
-        <button class="btn btn-warning" onclick="editEntry()">Edit</button>
         <button class="btn btn-success" onclick="addEntry()">Add</button>
         <button class="btn btn-secondary" onclick="window.close()">Close</button>
       </div>
     </div>
-    
+
   </div>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
