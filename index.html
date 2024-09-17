@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashier Portal</title>
     <!-- Bootstrap Icons CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" onerror="this.onerror=null; this.rel='stylesheet'; this.href='path/to/local/bootstrap-icons.min.css';">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
 </head>
@@ -18,8 +18,8 @@
                 <div class="login-div">
                     <form class="login-form" onsubmit="redirectToDashboard(event)">
                         <div class="text-center">
-                            <!-- Bootstrap Icon -->
-                            <span class="bi bi-people-fill users-icon"></span>
+                            <!-- Try using online icon, fallback to local SVG if offline -->
+                            <span class="bi bi-people-fill users-icon" onerror="this.onerror=null; this.outerHTML='<img src=\'people-fill.svg\' alt=\'Users Icon\' class=\'users-icon\'>';"></span>
                             <h2>Welcome</h2>
                         </div>
                         <div class="mb-3 text-end">
