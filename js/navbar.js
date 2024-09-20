@@ -19,7 +19,7 @@ class MyNavbar extends HTMLElement {
                                             Maintenance
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                            <li><a class="dropdown-item" href="#">Periodic maintenance</a></li>
+                                            <li><a class="dropdown-item" href="periodic_maintenance.html">Periodic maintenance</a></li>
                                             <li><a class="dropdown-item" href="device_data.html">Receiving a device</a></li>
                                         </ul>
                                     </li>
@@ -29,7 +29,7 @@ class MyNavbar extends HTMLElement {
                                             Reports
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                            <li><a class="dropdown-item" href="#">Treasury journal</a></li>
+                                            <li><a class="dropdown-item" href="treasury_report.html">Treasury journal</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
