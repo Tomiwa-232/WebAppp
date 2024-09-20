@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier Portal - Customer Balances</title>
+    <link rel="stylesheet" href="css/treasury_report.css">
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <my-navbar></my-navbar>
+
+        <!-- Treasury Report Section -->
+        <div class="treasury-section mt-4">
+            <h2 class="text-center text-primary">Treasury report for a period</h2>
+            <div class="form-group justify-content-center align-items-center mt-4 mb-4 rtl-section">
+                <label for="from-date">From:</label>
+                <input type="date" id="from-date" value="2018-01-01">
+                <label for="to-date">To:</label>
+                <input type="date" id="to-date" value="2024-09-26">
+            </div>
+
+            <div class="form-group justify-content-center align-items-center mt-4 mb-4 rtl-section">
+                <label for="admin-checkbox">User:</label>
+                <select id="userRole" class="form-select">
+                    <option>Admin</option>
+                    <option>User 1</option>
+                </select>
+                <input type="checkbox" class="form-checkboxes" id="checkbox1">
+            </div>
+
+            <div class="table-responsive" style="max-height: 400px; overflow-y: scroll; direction: rtl;">
+                <table class="table table-striped table-hover">
+                    <!-- <thead style="position: sticky; top: 0; background: #fff;">
+                        <tr>
+                            <th style="text-align: right;">Code</th>
+                            <th style="text-align: right;">Customer Name</th>
+                        </tr>
+                    </thead> -->
+                    <tbody>
+                        <!-- Simulating 15 rows -->
+                        <tr>
+                            <td style="text-align: right;">Previous balance</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Withdrawals</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Deposits</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Expenses</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Supplies</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Supplies returns</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Sales</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Sales returns</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Payments</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Receipts</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Schedule tax collected</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Vat collected</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Transfer from bank to treasury</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Transfer from treasury to bank</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Total</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">Maintenance</td>
+                            <td style="text-align: right;">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="button-container mt-3">
+                <button type="button" class="btn btn-danger">Close</button>
+                <button type="button" class="btn btn-success">Calc</button>
+                <button type="button" class="btn btn-primary" onclick="window.print()">Print receipt</button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+
+</body>
+
+</html>

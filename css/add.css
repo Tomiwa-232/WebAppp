@@ -1,5 +1,26 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    padding-top: 20px; /* Added padding to ensure content starts at the top */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.treasury-report-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.treasury-report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center; 
+}
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
@@ -246,3 +267,88 @@ th, td, tr {
 .nav-item {
     margin: 5px 0;
 } */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group-date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-checkboxes {
+    transform: scale(1.4);
+    width: 14px;
+    height: 14px;
+}
+
+.form-group input[type="date"],
+select {
+    width: 100%;
+    max-width: 170px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #c2c2c2;
+    font-size: 16px;
+    text-align: right;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-buttons {
+    margin-top: 30px;
+}
+
+/* Button Flexbox */
+.form-buttons .btn {
+    min-width: 120px;
+    margin: 0 10px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .form-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group-date {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons .btn {
+        width: 100%;
+    }
+}

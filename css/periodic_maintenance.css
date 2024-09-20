@@ -7,12 +7,12 @@ h2 {
     color: #333;
 }
 
-.inventory-header {
+.periodic-maintenance-header {
     margin: 30px;
 }
 
 
-.inventory-form {
+.periodic-maintenance-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -21,7 +21,7 @@ h2 {
 }
 
 .form-section {
-    flex: 0.4; 
+    /* flex: 0.4;  */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -35,44 +35,50 @@ h2 {
     gap: 15px;
 }
 
+.search-form-group {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px;
+}
+
 .form-checkboxes {
     transform: scale(1.4);
     width: 14px;
     height: 14px;
 }
 
-.form-group input[type="text"],
+    .form-group input[type="text"],
+    .search-form-group input[type="search"],
 select {
     width: 80%; 
-    max-width: 170px; 
+    max-width: 170px;
     padding: 5px;
     border-radius: 4px;
     border: 1px solid #c2c2c2;
     font-size: 16px;
-    text-align: right; 
+    text-align: right;   
 }
 
 label {
     font-size: 16px;
     font-weight: 600;
     margin-left: 10px; 
-    min-width: 120px; 
-    text-align: right; 
+    min-width: 180px;
+    text-align: right;
+}
+
+.radio label {
+    min-width: auto; 
 }
 
 button {
     align-self: flex-end; 
 }
 
-.show-price {
-    font-size: 16px;
-    margin-left: 10px; 
-}
-
 .table-section {
     overflow-x: scroll;
     overflow-y: scroll;
-    height: fit-content;
     max-height: 40vh;
     direction: rtl; /* Moves the scroll bar to the left */
 }
@@ -99,8 +105,32 @@ th, td, tr {
     min-width: auto;
 }
 
+/* Modal header styling */
+.modal-header {
+    background-color: #6a6a6a;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Modal form styling */
+  .form-group label {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  
+  .table {
+    margin-top: 1rem;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+  
+  .table th, .table td {
+    text-align: right;
+  }
+
 /* General styling for the form */
-.inventory-form {
+.periodic-maintenance-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -112,7 +142,7 @@ th, td, tr {
 /* Ensuring that form sections take up space correctly on different screens */
 .form-section.left,
 .form-section.right {
-    width: 48%; /* Slight reduction to ensure spacing on both sides */
+    width: 100%; 
 }
 
 /* Media Queries for Mobile Devices */
@@ -121,12 +151,12 @@ th, td, tr {
         padding: 0 15px; /* Adding space around the edges for mobile */
     }
 
-    .inventory-header {
+    .periodic-maintenance-header {
         margin: 20px;
         text-align: center;
     }
 
-    .inventory-form {
+    .periodic-maintenance-form {
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 20px;
@@ -139,6 +169,15 @@ th, td, tr {
         margin-bottom: 15px;
     }
 
+    .search-form-group {
+        display: flex;
+        min-width: max-content;
+    }
+
+    .search-form-group label {
+        min-width: auto;
+    }
+
     .form-group {
         display: flex;
         /* flex-direction: column-reverse; */
@@ -149,17 +188,25 @@ th, td, tr {
         text-align: right;
     }
 
-    .form-group input[type="text"],
-    .form-group select {
-        width: 100%;
-        margin-bottom: 5px;
+    .radio label {
+        display: flex;
+        direction: rtl;
+        margin-top: 5px;
+        gap: 5px;
     }
 
     .form-checkboxes {
         margin: auto;
         padding: auto;
     }
-    
+
+    .form-group input[type="text"],
+    .search-form-group input[type="search"],
+    .form-group select {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
     .table-section {
         overflow-x: auto;
     }
@@ -183,18 +230,18 @@ th, td, tr {
     }
 }
 
-/* Media Queries for Tablets and Small Screens */
+/* Media Queries for Tablets*/
 @media (min-width: 768px) and (max-width: 991px) {
     body {
         padding: 0 20px;
     }
 
-    .inventory-header {
+    .periodic-maintenance-header {
         margin: 25px;
         text-align: center;
     }
 
-    .inventory-form {
+    .periodic-maintenance-form {
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 25px;
@@ -224,7 +271,6 @@ th, td, tr {
     .form-buttons .form-group input {
         margin-right: 5px;
     }
-
 }
 
 /* General Responsive Table Styling */
